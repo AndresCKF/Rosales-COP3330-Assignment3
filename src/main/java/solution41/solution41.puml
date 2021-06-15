@@ -1,4 +1,21 @@
 @startuml
 
+'https://plantuml.com/class-diagram
+
+class app41 {
+    + String: ListNames
+    + method: countNames
+}
+
+class txtHandler {
+    + title: String
+    + readTxt()
+    + writeTxt()
+}
+
+
+app41 o--> txtHandler
+Assignment <|-- TimedAssignments
+
 
 @enduml
