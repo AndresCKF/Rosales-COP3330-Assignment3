@@ -3,19 +3,20 @@
 'https://plantuml.com/class-diagram
 
 class app41 {
-    + String: ListNames
-    + method: countNames
+    + (LinkedList <String>)List: namesList
+    + stringBuilder(LinkedList <String>)
+    + alphabetize(LinkedList <String>))
 }
 
 class txtHandler {
-    + title: String
-    + readTxt()
-    + writeTxt()
+    + readTxt(filename)
+    + writeTxt(string)
+    + createFile(filename
 }
 
 
 app41 o--> txtHandler
-Assignment <|-- TimedAssignments
+
 
 
 @enduml

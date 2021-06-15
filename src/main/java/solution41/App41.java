@@ -31,7 +31,7 @@ public class App41 {
         return output;
     }
 
-    private static LinkedList<String> alphabetize(LinkedList<String> namesList) {
+    public static LinkedList<String> alphabetize(LinkedList<String> namesList) {
         for(int j = 0; j < namesList.size() - 1; j++) {
             for (int i = 0; i < namesList.size() - j - 1; i++) {
                 int var = namesList.get(i).compareTo(namesList.get(i + 1));
