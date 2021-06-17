@@ -5,10 +5,9 @@
 
 import org.junit.jupiter.api.Test;
 import org.testng.Assert;
-import solution41.App41;
-import solution41.txtHandler;
+import ex41.App41;
+import ex41.txtHandler;
 
-import java.lang.reflect.Array;
 import java.util.*;
 
 public class App41Test {

@@ -2,7 +2,7 @@
  *  UCF COP3330 Summer 2021 Assignment 2 Solution
  *  Copyright 2021 Andres Rosales
  */
-package solution41;
+package ex41;
 import java.io.IOException;
 import java.util.*;
 public class App41 {
@@ -10,14 +10,12 @@ public class App41 {
         //read in text file
         //parse text file by newline, creating a new string for each line, this being person
         //alphabetize the strings and count them
-        //output the list one by one to new .txt file with header
         LinkedList<String> namesList = txtHandler.readTXT("src/main/java/solution41/exercise41_input.txt");
         namesList = alphabetize(namesList);
-        //turns list of names into a string to be sent to .txt file
-        String output = stringBuilder(namesList);
+        String output = stringBuilder(namesList); //turns list of names into a string to be sent to .txt file
         txtHandler.writeTXT(output);
     }
-
+//turn linkedlist into a single string of the alphabetized names
     private static String stringBuilder(LinkedList<String> namesList) {
         StringBuilder sb = new StringBuilder();
 

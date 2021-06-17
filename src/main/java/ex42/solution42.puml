@@ -1,0 +1,19 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+class App42 {
+    + (LinkedList <String>)List: namesList
+    + stringBuilder(LinkedList <String>)
+    + splitStringToPerson()
+    + formatDisplay()
+    + linesToEmployees()
+}
+
+class txtHandler {
+    + readTxt(filename)
+    + writeTxt(string)
+    + createFile(filename
+}
+
+App42 o--> txtHandler
+@enduml
