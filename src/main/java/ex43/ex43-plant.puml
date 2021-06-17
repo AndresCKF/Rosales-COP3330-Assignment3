@@ -1,0 +1,8 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+class App43{
+    - getWebsitename
+}
+
+@enduml
