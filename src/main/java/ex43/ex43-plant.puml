@@ -2,7 +2,26 @@
 'https://plantuml.com/sequence-diagram
 
 class App43{
-    - getWebsitename
+    - getWebsitename()
+    - getAuthor()
+    + userInput()
 }
+class fileHandler{
+    + makeDir()
+    + javascriptSubfolder()
+    + cssSubfolder()
 
+}
+class txtHandler{
++ readTxt(filename)
+    + writeTxt(string)
+    + createFile(filename)
+}
+class indexHTML{
+    + formatHTML
+    + createHTML
+}
+App43 *-- fileHandler
+App43 *-- indexHTML
+indexHTML *-- txtHandler
 @enduml
