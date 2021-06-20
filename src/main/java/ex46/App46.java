@@ -13,8 +13,9 @@ import java.util.*;
 
 public class App46 {
     public static void main(String[] args) throws FileNotFoundException {
-        //read in textfile
+        //read in textfile and creates a Map with word paired with frequency of word in document
         Map<String, Integer> words = txt2Map();
+        //send Map to be sorted, highest to lowest frequency
         Map<String, Integer> sortedWords = sortByFreq(words);
         displayMap(sortedWords);
 
@@ -22,10 +23,13 @@ public class App46 {
 
     private static void displayMap(Map<String, Integer> sortedWords) {
         for (Map.Entry<String, Integer> entry : sortedWords.entrySet()) {
+            //displays current word
             System.out.print("\n" + entry.getKey() + ":");
+            //keeps spaces between word and histogram consistent
             for(int i = 0; i< (10 - entry.getKey().length());i++){
                 System.out.print(" ");
             }
+            //outputs * for every instance of word found
             for(int i = 0; i< entry.getValue();i++){
                 System.out.print("*");
             }
@@ -34,6 +38,7 @@ public class App46 {
 
     private static Map<String, Integer> sortByFreq(Map<String, Integer> words) {
         LinkedHashMap<String, Integer> reverseSortedMap = new LinkedHashMap<>();
+        //takes original words map and outputs to a new map that is reverse sorted (highest to lowest)
         words.entrySet()
                 .stream()
                 .sorted(Map.Entry.comparingByValue(Comparator.reverseOrder()))

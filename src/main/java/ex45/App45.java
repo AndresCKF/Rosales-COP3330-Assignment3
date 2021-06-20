@@ -12,8 +12,10 @@ import java.util.Scanner;
 
 public class App45 {
     public static void main(String[] args) throws IOException {
+        //reads .txt file and replaces utilize with use
         String string = getReplacedText();
         String newFileName = getFileName();
+        //outputs modified file with given name
         fileHandler.writeNewFile(string, newFileName);
     }
 

@@ -14,11 +14,11 @@ public class App42 {
         //create an array of persons
         //send array of persons to output formatter
         //send back to print
-        LinkedList<String> txtLines = txtHandler.readTXT("src/main/java/ex42/exercise42_input.txt");
+        LinkedList<String> txtLines = txtHandler.readTXT("src/resources/exercise42_input.txt");
         //Convert lines into array of arrays
         String[][] employeesTable = linesToEmployees(txtLines);
         String output = formatDisplay(employeesTable);
-        txtHandler.writeTXT(output,"src/main/java/ex42/exercise42_output.txt" );
+        txtHandler.writeTXT(output,"./exercise42_output.txt" );
     }
 
     private static String formatDisplay(String[][] employeesTable) {

@@ -10,7 +10,7 @@ public class App41 {
         //read in text file
         //parse text file by newline, creating a new string for each line, this being person
         //alphabetize the strings and count them
-        LinkedList<String> namesList = txtHandler.readTXT("src/main/java/solution41/exercise41_input.txt");
+        LinkedList<String> namesList = txtHandler.readTXT("./src/resources/exercise41_input.txt");
         namesList = alphabetize(namesList);
         String output = stringBuilder(namesList); //turns list of names into a string to be sent to .txt file
         txtHandler.writeTXT(output);
@@ -30,6 +30,7 @@ public class App41 {
     }
 
     public static LinkedList<String> alphabetize(LinkedList<String> namesList) {
+        //bubble sort
         for(int j = 0; j < namesList.size() - 1; j++) {
             for (int i = 0; i < namesList.size() - j - 1; i++) {
                 int var = namesList.get(i).compareTo(namesList.get(i + 1));

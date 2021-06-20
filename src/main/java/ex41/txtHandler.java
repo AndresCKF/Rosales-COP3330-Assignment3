@@ -30,8 +30,8 @@ public class txtHandler {
     }
 
     public static void writeTXT(String output) throws IOException{
-        createFile("src/main/java/solution41/exercise41_output.txt");
-        try (FileWriter namesWriter = new FileWriter("src/main/java/solution41/exercise41_output.txt")) {
+        createFile("./exercise41_output.txt");
+        try (FileWriter namesWriter = new FileWriter("./exercise41_output.txt")) {
             namesWriter.write(output);
         }catch (IOException e) {
             System.out.println("An error occurred writing to file.");
