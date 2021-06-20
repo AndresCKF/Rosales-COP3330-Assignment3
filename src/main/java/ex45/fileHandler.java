@@ -28,7 +28,7 @@ public class fileHandler {
         return content;
     }
 
-    public static void createNewFile(String string, String newFileName) {
+    public static void writeNewFile(String string, String newFileName) {
         createFile(newFileName);
         try (FileWriter namesWriter = new FileWriter(newFileName)) {
             namesWriter.write(string);

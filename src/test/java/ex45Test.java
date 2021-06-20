@@ -5,6 +5,7 @@
  *
  */
 
+import ex45.App45;
 import ex45.fileHandler;
 import org.junit.jupiter.api.Test;
 
@@ -21,6 +22,15 @@ public class ex45Test {
                 "For example, \"She uses an IDE to write her Java programs\" instead of \"She" +ls +
                 "utilizes an IDE to write her Java programs\".";
         String result = fileHandler.readFile("src/resources/exercise45_input.txt");
+        assertEquals(expected, result);
+    }
+    @Test
+    public void test_textReplacer() throws IOException {
+        String ls = System.getProperty("line.separator");
+        String expected = "One should never use the word \"use\" in writing. Use \"use\" instead."+ls +
+                "For example, \"She uses an IDE to write her Java programs\" instead of \"She" +ls +
+                "uses an IDE to write her Java programs\".";
+        String result = App45.getReplacedText();
         assertEquals(expected, result);
     }
 }

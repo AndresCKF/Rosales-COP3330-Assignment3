@@ -12,11 +12,21 @@ import java.util.Scanner;
 
 public class App45 {
     public static void main(String[] args) throws IOException {
-        Scanner scanner = new Scanner(System.in);
+        String string = getReplacedText();
+        String newFileName = getFileName();
+        fileHandler.writeNewFile(string, newFileName);
+    }
+
+    public static String getReplacedText() throws IOException {
         String string = fileHandler.readFile("src/resources/exercise45_input.txt");
         string = string.replaceAll("utilize", "use");
+        return string;
+    }
+
+    private static String getFileName() {
+        Scanner scanner = new Scanner(System.in);
         System.out.println("Please enter new file name");
         String newFileName = scanner.nextLine();
-        fileHandler.createNewFile(string, newFileName);
+        return newFileName;
     }
 }
