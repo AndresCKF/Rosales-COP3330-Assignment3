@@ -1,0 +1,9 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+class App46{
+    + txt2Map()
+    + displayMap()
+    + sortByFreq()
+}
+@enduml
