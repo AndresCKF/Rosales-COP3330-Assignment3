@@ -6,7 +6,6 @@
  */
 
 package ex44;
-import ex44.Product;
 
 import java.util.ArrayList;
 
