@@ -10,7 +10,7 @@ import ex42.App42;
 import java.util.Arrays;
 import java.util.LinkedList;
 
-public class solution42Test {
+public class ex42Test {
 
     @Test
     void checktxtHandler_readfile_works(){

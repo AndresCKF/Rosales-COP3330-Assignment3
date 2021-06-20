@@ -10,7 +10,7 @@ import ex41.txtHandler;
 
 import java.util.*;
 
-public class App41Test {
+public class ex41Test {
 
     @Test
     void checktxtHandler_readfile_works(){
