@@ -19,7 +19,7 @@ import java.util.List;
 
 public class ex44Test {
     @Test
-    void readingFromJSONfile() throws NoSuchFieldException, IllegalAccessException {
+    void readingFromJSONfile1() throws NoSuchFieldException, IllegalAccessException {
         ArrayList<Product> listing = new ArrayList<Product>();
         listing.add(new Product("Widget", 25.00, 5));
         listing.add(new Product("Thing", 15.00, 5));
@@ -31,7 +31,33 @@ public class ex44Test {
         ArrayList<Product> listExp = expected.getList();
         ArrayList<Product> listresult = result.getList();
         assert listExp.get(0).equals(listresult.get(0));
+    }
+    @Test
+    void readingFromJSONfile2() throws NoSuchFieldException, IllegalAccessException {
+        ArrayList<Product> listing = new ArrayList<Product>();
+        listing.add(new Product("Widget", 25.00, 5));
+        listing.add(new Product("Thing", 15.00, 5));
+        listing.add(new Product("Doodad", 5.00, 10));
+        //expected is manually created Object containing arraylist
+        Products expected = new Products(listing);
+        //run the app that reads from JSON
+        Products result = App44.getdataJSON();
+        ArrayList<Product> listExp = expected.getList();
+        ArrayList<Product> listresult = result.getList();
         assert listExp.get(1).equals(listresult.get(1));
+    }
+    @Test
+    void readingFromJSONfile3() throws NoSuchFieldException, IllegalAccessException {
+        ArrayList<Product> listing = new ArrayList<Product>();
+        listing.add(new Product("Widget", 25.00, 5));
+        listing.add(new Product("Thing", 15.00, 5));
+        listing.add(new Product("Doodad", 5.00, 10));
+        //expected is manually created Object containing arraylist
+        Products expected = new Products(listing);
+        //run the app that reads from JSON
+        Products result = App44.getdataJSON();
+        ArrayList<Product> listExp = expected.getList();
+        ArrayList<Product> listresult = result.getList();
         assert listExp.get(2).equals(listresult.get(2));
     }
 }
